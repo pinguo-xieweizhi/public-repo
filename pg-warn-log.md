@@ -10,7 +10,7 @@
 |   bmall-bff   |  "subCode\":404,\"message\":not found   |   6c87a9bcddc4731444c4692e4b7132f1   |   从bmall 获取商品失败或超时    |  bmall 有些时候获取不到商品，据古sir说应该是某些服务器上的代码还是老代码    | 2024-09-26T01:53:43 | 古忠志 |
 |  bmall-bff  |  order not ship, try again later   |   942122e3c0cfb9785a8d8f93a3521837   |   检查发货，订单在指定的循环次数后未发货则会提示    |  暂不处理，会重新发货    | 2024-09-25T23:08:45 | 无 |
 |  video-beats-cli    | ERROR WatchRegionData    |    无  |    无   |   不用处理   | 2024-09-25T01:53:43 | 王平 |
-|  operational-materials    |  AutoRefresh.FieldDefinition:"rpc error: code = DeadlineExceeded desc = context deadline exceeded"   |  ec7ee3640a8292242993093ddf25c22e 与 无     |  存在单独取字段表的trace 超时  怀疑是刷新字段表缓存有问题     |      |
+|  operational-materials    |  AutoRefresh.FieldDefinition:"rpc error: code = DeadlineExceeded desc = context deadline exceeded"   |  ec7ee3640a8292242993093ddf25c22e 与 无     |  刷新字段表缓存 超时    |   原因未确定，有可能是竞争锁，或者访问数据库超时，暂时打印日志跟踪一下 https://github.com/pinguo-icc/field-definitions-svc/pull/319  | 2024-09-25T04:52:37 | 谢伟志 |
 |      |     |      |       |      |
 |      |     |      |       |      |
 |      |     |      |       |      |
