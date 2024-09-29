@@ -11,10 +11,10 @@
 |  bmall-bff  |  order not ship, try again later   |   942122e3c0cfb9785a8d8f93a3521837   |   检查发货，订单在指定的循环次数后未发货则会提示    |  暂不处理，会重新发货    | 2024-09-25T23:08:45 | 无 | 不处理 |
 |  video-beats-cli    | ERROR WatchRegionData    |    无  |    无   |   不用处理   | 2024-09-25T01:53:43 | 王平 | 不处理 |
 |  operational-materials    |  AutoRefresh.FieldDefinition:"rpc error: code = DeadlineExceeded desc = context deadline exceeded"   |  ec7ee3640a8292242993093ddf25c22e 与 无     |  刷新字段表缓存 超时    |   原因未确定，有可能是竞争锁，或者访问数据库超时，暂时打印日志跟踪一下 https://github.com/pinguo-icc/field-definitions-svc/pull/319  | 2024-09-25T04:52:37 | 谢伟志 | 需跟进 |
-|      |     |      |       |      |
-|      |     |      |       |      |
-|      |     |      |       |      |
-|      |     |      |       |      |
+|  transaction-svc    |  deviceID不能为空   |   d28ab575e9c2be5a26ef0ef89b0effbc   |   订单手动查询用户会员信息未判断参数导致    |  增加入参判断    |  2024-09-28T16:18:45 | 谢伟志 | 已处理，待与关联用户一起发版 | 
+|  push-go    |   FCM v2 send result:  |  无    |   请求 https://fcm.googleapis.com/v1/projects/%s/messages:send 出现503    |   暂不处理，可能为对方服务器负载过高  | 2024-09-26 17:06:19  | 谢伟志 | 持续跟进，或联系运维降级 |
+|   push-go   |  参数错误   |   66f38606acb6148248c77683   |   参数错错误类的日志级别设置的是error  |   做降级处理，https://github.com/PGWireless/dispatcher-go/pull/602   | 2024-09-25 11:40:54 | 谢伟志 | 待合并代码并发版 |
+|   app-camera360   |  参数错误: useId和deviceId不能同时为空   |   3ddf164c8c014b521044d21f1cd0d48b   |   请求的设备id是不合法的id 上报vip信息接口有检验    |   告警规则添加忽略   | 2024-09-28 | 谢伟志 | 待联系运维屏蔽 |
 |      |     |      |       |      |
 |      |     |      |       |      |
 |      |     |      |       |      |
